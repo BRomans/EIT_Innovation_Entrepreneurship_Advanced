@@ -99,10 +99,7 @@ public class OVRGradleGeneration
 		if (!PlayerSettings.GetUseDefaultGraphicsAPIs(BuildTarget.Android))
 		{
 			GraphicsDeviceType[] apis = PlayerSettings.GetGraphicsAPIs(BuildTarget.Android);
-			if (apis.Length >= 1 && apis[0] == GraphicsDeviceType.Vulkan)
-			{
-				throw new BuildFailedException("The Vulkan Graphics API does not support XR in your configuration. To use Vulkan, you must use Unity 2019.3 or newer, and the XR Plugin Management.");
-			}
+			
 		}
 #endif
 
