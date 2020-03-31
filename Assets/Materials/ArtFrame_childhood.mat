@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ArtFrame
+  m_Name: ArtFrame_childhood
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _EMISSION
   m_LightmapFlags: 2
@@ -62,7 +62,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 10
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0.49
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 3
@@ -74,5 +74,5 @@ Material:
     - _UVSec: 0
     - _ZWrite: 0
     m_Colors:
-    - _Color: {r: 0.21150766, g: 0.4360565, b: 0.9150943, a: 1}
-    - _EmissionColor: {r: 0.4188323, g: 0.45895416, b: 0.49056602, a: 1}
+    - _Color: {r: 0.064079754, g: 0.3018868, b: 0.06635542, a: 1}
+    - _EmissionColor: {r: 0.27450982, g: 0.67058825, b: 0.29943526, a: 1}
