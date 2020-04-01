@@ -8,12 +8,16 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 1.0f;
     // Detect if the player has started
     private bool isStarted = false;
+    // All the checkpoints
+    public GameObject[] targets;
     // The target (cylinder) position.
-    public GameObject target;
+    private GameObject target;
+    
+    private int targetCounter = 0;
 
-    void Awake()
+    void Start()
     {
-        
+        target = targets[targetCounter];
     }
 
     void Update()
@@ -27,6 +31,10 @@ public class PlayerMovement : MonoBehaviour
             {
                 transform.position = Vector3.MoveTowards(transform.position, target.transform.position, step);
 
+            } else if(targetCounter < 3) {
+                targetCounter++;
+                target = targets[targetCounter];
+                speed += 0.2f;
             }
         }
     }
