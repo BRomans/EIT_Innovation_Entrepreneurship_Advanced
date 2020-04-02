@@ -5,9 +5,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     // Adjust the speed for the application.
-    public float speed = 1.0f;
+    public float speed = 3.0f;
     // Detect if the player has started
     private bool isStarted = false;
+
+    // All the audio sources
+    public AudioSource[] musics;
+    // Current playing music
+    private AudioSource currentMusic;
     // All the checkpoints
     public GameObject[] targets;
     // The target (cylinder) position.
@@ -18,11 +23,14 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         target = targets[targetCounter];
+        currentMusic = musics[targetCounter];
+        currentMusic.Play();
+        startMoving();
     }
 
     void Update()
     {
-        if(isStarted) {
+        if(true) {
             // Move our position a step closer to the target.
             float step =  speed * Time.deltaTime; // calculate distance to move
 
@@ -34,7 +42,10 @@ public class PlayerMovement : MonoBehaviour
             } else if(targetCounter < 3) {
                 targetCounter++;
                 target = targets[targetCounter];
-                speed += 0.2f;
+                speed+= 1.0f;
+                currentMusic.Stop();
+                currentMusic = musics[targetCounter];
+                currentMusic.Play();
             }
         }
     }
