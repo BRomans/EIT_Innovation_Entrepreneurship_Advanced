@@ -24,13 +24,11 @@ public class PlayerMovement : MonoBehaviour
     {
         target = targets[targetCounter];
         currentMusic = musics[targetCounter];
-        currentMusic.Play();
-        startMoving();
     }
 
     void Update()
     {
-        if(true) {
+        if(isStarted) {
             // Move our position a step closer to the target.
             float step =  speed * Time.deltaTime; // calculate distance to move
 
@@ -52,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void startMoving() {
         this.isStarted = true;
+        currentMusic.Play();
     }
 
     public void stopMoving() {
