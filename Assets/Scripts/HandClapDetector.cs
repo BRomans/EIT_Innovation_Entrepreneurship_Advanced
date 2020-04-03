@@ -20,8 +20,8 @@ public class HandClapDetector : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collision collision){
-        if(collision.collider.gameObject.tag == "HandClap"){
+    void OnTriggerEnter(Collider collision){
+        if(collision.gameObject.tag == "HandClap"){
             playerMovement.startMoving();
             Destroy(startText);
         } 

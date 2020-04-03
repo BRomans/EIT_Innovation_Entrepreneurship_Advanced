@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     // Adjust the speed for the application.
-    public float speed = 3.0f;
+    public float speed = 4.0f;
     // Detect if the player has started
     private bool isStarted = false;
 
